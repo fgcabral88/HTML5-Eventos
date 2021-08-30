@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento - focus</title>
+    <title>Evento - mousemove</title>
+    <style>
+        div {
+            width: 50vw;
+            height: 50vw;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" onfocus="debug(event)">
-    
+    <!--Disparado quando o cursor do mouse se move sobre o elemento-->
+
+    <div onmousemove="debug(event)">
+
+    </div>
+
     <script>
         function debug(event) {
             console.log('Evento: ' + event.type);

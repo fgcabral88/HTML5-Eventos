@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento - invalid</title>
+    <title>Evento - mouseout</title>
+    <style>
+        div {
+            width: 50vw;
+            height: 50vw;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-    <form>
-        <input type="email" oninvalid="debug(event)" required>
-        <button type="submit">Enviar</button>
-    </form>
-        
+    <!--Disparado quando o cursor do mouse não está em cima do elemento-->
+
+    <div onmousemove="debug(event)" onmouseout="debug(event)">
+
+    </div>
+
     <script>
         function debug(event) {
             console.log('Evento: ' + event.type);

@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento - contextmenu</title>
+    <title>Evento - submit</title>
 </head>
 <body>
-    <input type="text" oncontextmenu="debug(event)">
-    
+    <!--Disparado quando o formulário é enviado-->
+
+
+    <form onsubmit="debug(event)">
+        <input type="text">
+        <button type="submit">Enviar</button>
+    </form>
+
     <script>
         function debug(event) {
+            // Cancelando a atualização do navegador
+            event.preventDefault();
             console.log('Evento: ' + event.type);
         }
     </script>

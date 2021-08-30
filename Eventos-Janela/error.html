@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento - resize</title>
+    <title>Evento - error</title>
 </head>
 
-<body onresize="debug(event)">
+<body>
+    <!--Disparado quando ocorrer um erro-->
+
+
+    <!--Imagem que não existe-->
+    <img src="image/aueheauhaeu.git" alt="image" onerror="debug(event)">
 
     <!--Evento só dispara com o JS-->
     <script>
         function debug(e) {
             console.log('Evento: ' + e.type);
+            alert('Evento: ' + e.type);
         }
     </script>
 

@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento - click</title>
+    <title>Evento - wheel</title>
+    <style>
+        div {
+            width: 50vw;
+            height: 50vw;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
+    <!--Disparado quando a roda do mouse é rodada-->
 
-    <button type="button" onclick="debug(event)">Salvar</button>
+    <div onwheel="debug(event)">
+
+    </div>
 
     <script>
         function debug(event) {

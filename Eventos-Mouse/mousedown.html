@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento - input</title>
+    <title>Evento - mousedown</title>
 </head>
 <body>
-    <input type="text" oninput="debug(event)">
+    <!--Disparado quando o botão do clique vai para baixo-->
     
+    <button type="button" onclick="debug(event)" onmousedown="debug(event)">Salvar</button>
+
     <script>
         function debug(event) {
             console.log('Evento: ' + event.type);

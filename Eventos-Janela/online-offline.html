@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento -  afterprint e beforeprint </title>
+    <title>Evento - online - offline</title>
 </head>
-<body onbeforeprint="debug(event)" onafterprint="debut(event)">
+
+<body ononline="debug(event)" onoffline="debug(event)">
+    <!--Disparado quando o navegador é desconectado da internet/Disparado quando o navegador é conectado a internet-->
+
 
     <!--Evento só dispara com o JS-->
     <script>
-        function debug(e){
+        function debug(e) {
+            console.log('Evento: ' + e.type);
             alert('Evento: ' + e.type);
         }
     </script>
 
 </body>
+
 </html>

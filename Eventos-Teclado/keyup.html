@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento - keyup</title>
+</head>
+<body>
+    <!--Disparado quando a tecla é solta-->
+
+    <input type="text" onkeydown="debug(event)" onkeypress="debug(event)" onkeyup="debug(event)">
+
+    <script>
+        function debug(event) {
+            console.log('Evento: ' + event.type);
+        }
+    </script>
+
+</body>
+</html>

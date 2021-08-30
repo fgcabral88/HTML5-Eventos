@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento - hashchange</title>
+    <title>Evento - beforeunload</title>
 </head>
 
-<body onhashchange="debug(event)">
+<body onbeforeunload="return debug(event)">
+    <!--Disparado antes do navegador carregar outra página-->
+
 
     <!--Evento só dispara com o JS-->
     <script>
         function debug(e) {
             console.log('Evento: ' + e.type);
-            alert('Evento: ' + e.type);
+            
+           return 'Evento: ' + e.type;
         }
     </script>
 
