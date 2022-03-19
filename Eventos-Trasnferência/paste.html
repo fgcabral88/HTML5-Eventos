@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Paste</title>
+</head>
+<body oncut="debug(event)">
+    <!--Disparado quando o conteúdo do elemento é copiado-->
+    <p></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolore neque magnam voluptate 
+       deleniti natus nostrum quod, laborum, ex placeat modi perspiciatis pariatur ab, minus facere 
+       labore consectetur officia fuga.</p>
+
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolore neque magnam voluptate 
+       deleniti natus nostrum quod, laborum, ex placeat modi perspiciatis pariatur ab, minus facere 
+       labore consectetur officia fuga.</p>
+
+    <input type="text" onpaste="debug(event)">
+
+   <script>
+       function debug(event) {
+           console.log('Evento: ' + event.type);
+       }
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento toggle</title>
+</head>
+<body>
+    <details ontoggle="debug(event)">
+        <summary>Hcode</summary>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio incidunt in ullam ducimus magnam ad suscipit, 
+            repudiandae dolorem, vitae obcaecati tempora. Provident doloremque soluta placeat voluptas quas? Doloribus, reprehenderit.</p>
+    </details>
+
+    <script>
+        function debug(event){
+            console.log(event.type);
+        }
+    </script>
+
+</body>
+</html>

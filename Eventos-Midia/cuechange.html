@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Cuechange</title>
+    <style>
+        video {
+            width:80vw;
+        }
+    </style>
+</head>
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" controls>
+    <!--Legenda-->
+    <track src="tracks/AV1_trailer_pt.vtt" label="português" kind="subtitle" srclang="pt" default oncanplay="debug(event)">
+    </video>
+
+    <script>
+        function debug(event) {
+            console.log('Evento: ' + event.type);
+        }
+    </script>
+    
+</body>
+</html>
